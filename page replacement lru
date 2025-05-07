@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+#define MAX 100
+
+int findLRU(int time[], int frames) {
+    int min = time[0], pos = 0;
+    for (int i = 1; i < frames; i++) {
+        if (time[i] < min) {
+            min = time[i];
+            pos = i;
+        }
+    }
+    return pos;
+}
+
+void LRU(int pages[], int n, int frames) {
+    int frame[frames], time[frames];
+    int pageFaults = 0, counter = 0;
+
+    for (int i = 0; i < frames; i++) {
+        frame[i] = -1;
+        time[i] = 0;
+    }
+
+    printf("\nLRU Page Replacement:\n");
+
+    for (int i = 0; i < n; i++) {
+        int page = pages[i], found = 0;
+
+        for (int j = 0; j < frames; j++) {
+            if (frame[j] == page) {
+                found = 1;
+                time[j] = ++counter;
+                break;
+            }
+        }
+
+   
+        if (!found) {
+            int pos = -1;
+
+            for (int j = 0; j < frames; j++) {
+                if (frame[j] == -1) {
+                    pos = j;
+                    break;
+                }
+            }
+
+            if (pos == -1)
+                pos = findLRU(time, frames);
+
+            frame[pos] = page;
+            time[pos] = ++counter;
+            pageFaults++;
+        }
+
+        
+        printf("After page %2d -> [ ", page);
+        for (int j = 0; j < frames; j++) {
+            if (frame[j] != -1)
+                printf("%2d ", frame[j]);
+            else
+                printf(" - ");
+        }
+        printf("]\n");
+    }
+
+    printf("\nTotal Page Faults = %d\n", pageFaults);
+}
+
+int main() {
+    int pages[MAX], n, frames;
+
+    printf("Enter number of pages: ");
+    scanf("%d", &n);
+
+    printf("Enter the page reference string:\n");
+    for (int i = 0; i < n; i++)
+        scanf("%d", &pages[i]);
+
+    printf("Enter number of frames: ");
+    scanf("%d", &frames);
+
+    LRU(pages, n, frames);
+
+    return 0;
+}
