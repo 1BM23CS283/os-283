@@ -92,4 +92,26 @@ int main()
     calculateTimes(n, at, bt, pr, index);
     return 0;
 }
+ Enter number of processes: 3
+ Enter AT, BT, and Priority P1: 2
+ 4
+ 1
+ Enter AT, BT, and Priority P2: 3
+ 5
+ 2
+ Enter AT, BT, and Priority P3: 7
+ 9
+ 1
+ 
+ Choose Scheduling Algorithm:
+ 1. Preemptive Priority Scheduling
+ 2. Non-Preemptive Priority Scheduling
+ Enter choice: 2
+ 
+ P#      AT      BT      PR      CT      TAT     WT
+ 1       2       4       1       6       4       0
+ 2       3       5       2       11      8       3
+ 3       7       9       1       20      13      4
+ Average TAT: 8.33
+ Average WT: 2.33
 
