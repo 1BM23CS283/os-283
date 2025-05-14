@@ -71,3 +71,22 @@ int main() {
 
     return 0;
 }
+output
+Enter the number of memory blocks: 3
+Enter the number of processes: 3
+Enter the sizes of the memory blocks:
+Block 1: 200
+Block 2: 600
+Block 3: 800
+Enter the sizes of the processes:
+Process 1: 290
+Process 2: 409
+Process 3: 560
+
+Process No.     Process Size    Block no.       Block Size
+ 1               290            3                510
+ 2               409            2                191
+ 3               560            Not Allocated
+
+Process returned 0 (0x0)   execution time : 21.735 s
+Press any key to continue.
