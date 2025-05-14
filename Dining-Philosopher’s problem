@@ -67,3 +67,13 @@ int main() {
 
     return 0;
 }
+OUTPUT:
+Philosopher 0 is thinking.
+Philosopher 1 is thinking.
+
+Philosopher 0 picked up fork 0 (left).
+Philosopher 0 picked up fork 1 (right).
+Philosopher 0 is eating.
+Philosopher 0 put down fork 0 (left).
+Philosopher 0 put down fork 1 (right).
+
