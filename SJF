@@ -84,3 +84,30 @@
  
      return 0;
  }
+output:
+Enter number of processes: 4
+Enter Burst Times and Arrival Times for each process:
+Process 1:
+Burst Time: 7
+Arrival Time: 0
+Process 2:
+Burst Time: 3
+Arrival Time: 8
+Process 3:
+Burst Time: 4
+Arrival Time: 3
+Process 4:
+Burst Time: 6
+Arrival Time: 5
+Process Burst Time      Arrival Time    Waiting Time    Turnaround Time
+1               7               0               0               7
+2               3               8               3               6
+3               4               3               4               8
+4               6               5               9               15
+
+Average Waiting Time: 4.00
+Average Turnaround Time: 9.00
+
+Process returned 0 (0x0)   execution time : 30.850 s
+Press any key to continue.
+
