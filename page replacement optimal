@@ -98,3 +98,19 @@ int main() {
 
     return 0;
 }
+
+OUTPUT
+Enter number of pages: 3
+Enter the page reference string:
+9 8 7
+Enter number of frames: 4
+
+Optimal Page Replacement:
+After page  9 -> [  9  -  -  - ]
+After page  8 -> [  9  8  -  - ]
+After page  7 -> [  9  8  7  - ]
+
+Total Page Faults = 3
+
+Process returned 0 (0x0)   execution time : 10.875 s
+Press any key to continue.
