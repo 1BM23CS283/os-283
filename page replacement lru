@@ -85,3 +85,19 @@ int main() {
 
     return 0;
 }
+OUTPUT
+Enter number of pages: 3
+Enter the page reference string:
+ 1 5 2
+Enter number of frames: 3
+
+LRU Page Replacement:
+After page  1 -> [  1  -  - ]
+After page  5 -> [  1  5  - ]
+After page  2 -> [  1  5  2 ]
+
+Total Page Faults = 3
+
+Process returned 0 (0x0)   execution time : 13.220 s
+Press any key to continue.
+
