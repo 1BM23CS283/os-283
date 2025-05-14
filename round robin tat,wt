@@ -94,3 +94,21 @@ int main()
     calculateTimes(n, at, bt, tq);
     return 0;
 }
+ OUTPUT:
+ Enter number of processes: 3
+ Enter AT and BT for process 1: 0
+ 3
+ Enter AT and BT for process 2: 1
+ 5
+ Enter AT and BT for process 3: 2
+ 8
+ Enter time quantum: 5
+ P#      AT      BT      CT      TAT     WT
+ 1       0       3       3       3       0
+ 2       1       5       8       7       2
+ 3       2       8       16      14      6
+ Average TAT: 8.00
+ Average WT: 2.67
+ 
+ Process returned 0 (0x0)   execution time : 22.973 s
+ Press any key to continue.
