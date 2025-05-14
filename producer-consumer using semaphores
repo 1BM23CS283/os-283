@@ -61,3 +61,27 @@ int main()
 
     return 0;
 }
+output
+
+1. Producer-Consumer Problem
+2. Dining Philosophers Problem
+3. Exit
+Enter your choice: 1
+Producer produced: 41
+Consumer consumed: 41
+
+1. Producer-Consumer Problem
+2. Dining Philosophers Problem
+3. Exit
+Enter your choice: 2
+Philosopher 1 is thinking
+Philosopher 1 is eating
+Philosopher 1 finished eating
+
+1. Producer-Consumer Problem
+2. Dining Philosophers Problem
+3. Exit
+Enter your choice: 3
+
+Process returned 0 (0x0)   execution time : 8.360 s
+Press any key to continue.
